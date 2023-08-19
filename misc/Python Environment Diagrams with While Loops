@@ -1,0 +1,77 @@
+Python Environment Diagrams with While Loops
+
+##Introduction
+Python is an interpreted language, which means that it executes code line by line. In order to understand how code is executed, it's important to understand the concept of an environment diagram. An environment diagram helps us visualize how Python stores data in memory and how it executes code.
+
+## What is an Environment Diagram?
+An environment diagram is a model of Python's memory that shows how Python stores variables and their values. It's a way to visualize the state of a program at a specific point in time. In an environment diagram, we can see the values of all variables and their relationships to each other.
+
+## How to Create an Environment Diagram?
+To create an environment diagram, we need to follow these steps:
+1. Draw a box to represent the global frame.
+2. Write the names of any global variables inside the box, along with their values.
+3. When a function is called, create a new frame and draw a box to represent it.
+4. Write the names of any local variables inside the box, along with their values.
+5. Draw arrows from local variables to the values they reference.
+
+## Demo: While Loops
+Let's demonstrate how environment diagrams work with a while loop example. Consider the following Python code:
+
+
+x = 0
+while x < 5:
+    print(x)
+    x += 1
+
+
+1. We start by creating a global frame and storing the value 0 in the variable `x`.
+
+Global Frame:
+x = 0
+
+2. We then encounter a while loop. We check the condition `x < 5`, which evaluates to `True`. We create a new frame for the while loop and add the variable `x` to its local frame. We then execute the first line of the while loop, which is to print the value of `x`.
+
+Global Frame:
+x = 0
+
+While Loop Frame:
+x = 0
+
+Output: `0`
+3. We then execute the second line of the while loop, which increments the value of `x` by 1.
+
+Global Frame:
+x = 0
+
+While Loop Frame:
+x = 1
+
+4. We then return to the beginning of the while loop and check the condition `x < 5`, which evaluates to `True`. We print the value of `x` again and increment it by 1.
+
+Global Frame:
+x = 0
+
+While Loop Frame:
+x = 2
+
+Output: `1`
+5. We repeat this process until the value of `x` becomes 5, at which point the condition `x < 5` evaluates to `False` and we exit the while loop.
+
+## Using PythonTutor
+PythonTutor is a website that allows us to create environment diagrams for Python code. We can use it to visualize the execution of our code and better understand how it works.
+
+Let's use PythonTutor to create an environment diagram for our while loop example. 
+
+1. Go to https://pythontutor.com/ and select Python 3. 
+2. Copy and paste the following code in the code editor:
+
+x = 0
+while x < 5:
+    print(x)
+    x += 1
+
+3. Click on "Visualize Execution" to see the environment diagram.
+4. Click on the "Forward" button to step through the execution of the code and see how the environment diagram changes.
+
+## Conclusion
+In this lecture, we learned about environment diagrams and how they help us visualize how Python stores data in memory and executes code. We demonstrated these concepts with a while loop example and also used PythonTutor to create an environment diagram for our code.
